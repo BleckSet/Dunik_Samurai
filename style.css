@@ -287,15 +287,6 @@ progress {
     display: none
 }
 
-@media (max-width:1521px) {
-    .text-block p,
-    .image-box {
-        margin-bottom: 30px
-    }
-    .text-block h1 {
-        line-height: 116px
-    }
-}
 
 .model_container_inner {
     transition: all .5s ease;
@@ -490,5 +481,15 @@ progress {
 @media (max-width:1701px) {
     .model_container_inner.open {
         left: 260px
+    }
+}
+
+@media (max-width:1521px) {
+    .text-block p,
+    .image-box {
+        margin-bottom: 30px
+    }
+    .text-block h1 {
+        line-height: 116px
     }
 }
