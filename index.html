@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- normallized wheel -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/normalize-wheel@1.0.1/src/isEventSupported.min.js"></script> -->
+
+    <!-- ola -->
+    <script src="https://cdn.jsdelivr.net/npm/ola"></script>
+
+    <!-- threejs interaction -->
+    <!-- <script src="https://cdn.skypack.dev/three.interactive"></script> -->
+
+    <!-- gsap min -->
+    <script src="https://assets.codepen.io/16327/gsap-latest-beta.min.js?r=3.11.5"></script>
+
+    <!-- tween -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/20.0.0/tween.umd.js"></script>
+
+    <!-- three -->
+    <script type="importmap">{
+        "imports": {
+            "three": "https://threejs.org/build/three.module.js",
+            "three/addons/": "https://threejs.org/examples/jsm/",
+            "normalizeWheel": "https://cdn.jsdelivr.net/npm/normalize-wheel@1.0.1/+esm"
+        }
+    }</script><!-- Remove this when import maps will be widely supported -->
+
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+
+    <!-- <script src="./js/libs/basis/basis_transcoder.js"></script> -->
+
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="progressbar-container">
+        <div class="progress-bar-alt" style="--p:0">
+            <div class="progress-bar-alt_label">
+                Progress
+            </div>
+        </div>
+        <!-- <div class="progressbar">
+            <label for="progress-bar">Loading...</label>
+            <progress id="progress-bar" value="0" max="100"></progress>
+
+        </div> -->
+    </div>
+    <div class="cursor-container cursor-container-loading">
+        <div class="cursor">
+            <svg viewBox="0 0 70 70" preserveAspectRatio="xMinYMin" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="35" cy="35" r="7" fill="lightgrey" />
+                <g class="cursor-bigPart">
+                    <circle class="point" cx="35" cy="35" r="35" fill="#EAFC52" />
+                    <!-- <rect class="line-v" x="34" y="20" width="3" height="30" fill="black" /> -->
+                    <!-- <rect class="line-h" x="50" y="34" width="3" height="30" transform="rotate(90 50 34)" -->
+                    fill="black" />
+                    <polygon points="20.5 24 36.5 48 52.5 24 36.5 34 20.5 24" fill="black" transform="rotate(90 35 35)"
+                        style="" />
+                </g>
+            </svg>
+
+        </div>
+
+    </div>
+    <div class="model-container">
+        <div class="model"></div>
+    </div>
+
+    <div class="container">
+
+        <!-- 1111111111111111111111111111111111111111111111111111111111111111111111111 -->
+        <div class="model_container_inner open active open active container">
+        <div class="text-block">
+
+            <h1>SHOGUN</h1>
+            <p>Crew brings people closer through fandom while giving artists new ways to engage and monetize their most
+                passionate fans. Connect Spotify or Apple Music
+            </p>
+
+            <div class="block_image">
+
+                <div class="image-box">
+                    <div class="box">
+                        <svg width="37" height="37" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <circle cx="5" cy="5" r="5" fill="#EAFC52" style="" />
+                        </svg>
+                        <!-- <img src="https://www.fromscout.com/images/features/crewArrow.svg" alt=""> -->
+                    </div>
+                    <span>Connect Spotify</span>
+                </div>
+
+                <div class="image-box">
+                    <div class="box">
+                        <svg width="37" height="37" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <circle cx="5" cy="5" r="5" fill="#EAFC52" style="" />
+                        </svg>
+                    </div>
+                    <span>Connect Spotify</span>
+                </div>
+
+                <div class="image-box">
+                    <div class="box">
+                        <svg width="37" height="37" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <circle cx="5" cy="5" r="5" fill="#EAFC52" style="" />
+                        </svg>
+                    </div>
+                    <span>Connect Spotify</span>
+                </div>
+                <!-- <div class="image-box">
+                    <div class="box">
+                        <img src="https://www.fromscout.com/images/features/crewArrow.svg" alt="">
+                    </div>
+                    <span>Connect Spotify or Apple Music</span>
+                </div> -->
+            </div>
+
+            <!--  -->
+
+
+
+               
+            <a href="#" class="yelBtn intro">
+                <span>     Подробнее</span>
+            </a>
+
+
+        </div>
+    </div>
+        <!-- 22222222222222222222222222222222222222222222222222222222222222222222222222 -->
+        <div class="model_container_inner open active open active container">
+        <div class="text-block text-block_default">
+
+            <h1>Samurai</h1>
+            <p>Crew brings people closer through fandom while giving artists new ways to engage and monetize their most
+                passionate fans. Connect Spotify or Apple Music
+            </p>
+
+            <div class="block_image">
+
+                <div class="image-box">
+                    <div class="box">
+                        <svg width="37" height="37" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <circle cx="5" cy="5" r="5" fill="#EAFC52" style="" />
+                        </svg>
+                        <!-- <img src="https://www.fromscout.com/images/features/crewArrow.svg" alt=""> -->
+                    </div>
+                    <span>Connect Spotify</span>
+                </div>
+
+                <div class="image-box">
+                    <div class="box">
+                        <svg width="37" height="37" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <circle cx="5" cy="5" r="5" fill="#EAFC52" style="" />
+                        </svg>
+                    </div>
+                    <span>Connect Spotify</span>
+                </div>
+
+                <div class="image-box">
+                    <div class="box">
+                        <svg width="37" height="37" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <circle cx="5" cy="5" r="5" fill="#EAFC52" style="" />
+                        </svg>
+                    </div>
+                    <span>Connect Spotify</span>
+                </div>
+                <!-- <div class="image-box">
+                    <div class="box">
+                        <img src="https://www.fromscout.com/images/features/crewArrow.svg" alt="">
+                    </div>
+                    <span>Connect Spotify or Apple Music</span>
+                </div> -->
+            </div>
+
+            <!--  -->
+
+
+
+               
+            <a href="#" class="yelBtn intro">
+                <span>     Подробнее</span>
+            </a>
+
+
+        </div>
+    </div>
+        <!-- 3333333333333333333333333333333333333333333333333333333333333333333333333 -->
+        <div class="model_container_inner open active open active container">
+        <div class="text-block text-block_default">
+
+            <h1>RONIN</h1>
+            <p>Crew brings people closer through fandom while giving artists new ways to engage and monetize their most
+                passionate fans. Connect Spotify or Apple Music
+            </p>
+
+            <div class="block_image">
+
+                <div class="image-box">
+                    <div class="box">
+                        <svg width="37" height="37" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <circle cx="5" cy="5" r="5" fill="#EAFC52" style="" />
+                        </svg>
+                        <!-- <img src="https://www.fromscout.com/images/features/crewArrow.svg" alt=""> -->
+                    </div>
+                    <span>Connect Spotify</span>
+                </div>
+
+                <div class="image-box">
+                    <div class="box">
+                        <svg width="37" height="37" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <circle cx="5" cy="5" r="5" fill="#EAFC52" style="" />
+                        </svg>
+                    </div>
+                    <span>Connect Spotify</span>
+                </div>
+
+                <div class="image-box">
+                    <div class="box">
+                        <svg width="37" height="37" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <circle cx="5" cy="5" r="5" fill="#EAFC52" style="" />
+                        </svg>
+                    </div>
+                    <span>Connect Spotify</span>
+                </div>
+                <!-- <div class="image-box">
+                    <div class="box">
+                        <img src="https://www.fromscout.com/images/features/crewArrow.svg" alt="">
+                    </div>
+                    <span>Connect Spotify or Apple Music</span>
+                </div> -->
+            </div>
+
+            <!--  -->
+
+
+
+               
+            <a href="#" class="yelBtn intro">
+                <span>     Подробнее</span>
+            </a>
+
+
+        </div>
+    </div>
+        <!-- 4444444444444444444444444444444444444444444444444444444444444444444444444 -->
+
+        <div class="model_container_inner open active open active container">
+        <div class="text-block text-block_default">
+
+            <h1>katana</h1>
+            <p>Crew brings people closer through fandom while giving artists new ways to engage and monetize their most
+                passionate fans. Connect Spotify or Apple Music
+            </p>
+
+            <div class="block_image">
+
+                <div class="image-box">
+                    <div class="box">
+                        <svg width="37" height="37" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <circle cx="5" cy="5" r="5" fill="#EAFC52" style="" />
+                        </svg>
+                        <!-- <img src="https://www.fromscout.com/images/features/crewArrow.svg" alt=""> -->
+                    </div>
+                    <span>Connect Spotify</span>
+                </div>
+
+                <div class="image-box">
+                    <div class="box">
+                        <svg width="37" height="37" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <circle cx="5" cy="5" r="5" fill="#EAFC52" style="" />
+                        </svg>
+                    </div>
+                    <span>Connect Spotify</span>
+                </div>
+
+                <div class="image-box">
+                    <div class="box">
+                        <svg width="37" height="37" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <circle cx="5" cy="5" r="5" fill="#EAFC52" style="" />
+                        </svg>
+                    </div>
+                    <span>Connect Spotify</span>
+                </div>
+                <!-- <div class="image-box">
+                    <div class="box">
+                        <img src="https://www.fromscout.com/images/features/crewArrow.svg" alt="">
+                    </div>
+                    <span>Connect Spotify or Apple Music</span>
+                </div> -->
+            </div>
+
+            <!--  -->
+
+
+       
+            <a href="#" class="yelBtn intro">
+                <span>     Подробнее</span>
+            </a>
+
+        </div>
+    </div>
+        <!-- 55555555555555555555555555555555555555555555555555555555555555555555555555555555 -->
+ <div class="model_container_inner open active open active container">
+        <div class="text-block text-block_default">
+
+            <h1>shinobi</h1>
+            <p>Crew brings people closer through fandom while giving artists new ways to engage and monetize their most
+                passionate fans. Connect Spotify or Apple Music
+            </p>
+
+            <div class="block_image">
+
+                <div class="image-box">
+                    <div class="box">
+                        <svg width="37" height="37" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <circle cx="5" cy="5" r="5" fill="#EAFC52" style="" />
+                        </svg>
+                        <!-- <img src="https://www.fromscout.com/images/features/crewArrow.svg" alt=""> -->
+                    </div>
+                    <span>Connect Spotify</span>
+                </div>
+
+                <div class="image-box">
+                    <div class="box">
+                        <svg width="37" height="37" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <circle cx="5" cy="5" r="5" fill="#EAFC52" style="" />
+                        </svg>
+                    </div>
+                    <span>Connect Spotify</span>
+                </div>
+
+                <div class="image-box">
+                    <div class="box">
+                        <svg width="37" height="37" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <circle cx="5" cy="5" r="5" fill="#EAFC52" style="" />
+                        </svg>
+                    </div>
+                    <span>Connect Spotify</span>
+                </div>
+                <!-- <div class="image-box">
+                    <div class="box">
+                        <img src="https://www.fromscout.com/images/features/crewArrow.svg" alt="">
+                    </div>
+                    <span>Connect Spotify or Apple Music</span>
+                </div> -->
+            </div>
+
+            <!--  -->
+
+
+               
+            <a href="#" class="yelBtn intro">
+                <span>     Подробнее</span>
+            </a>
+
+
+
+        </div>
+    </div>
+        <div class="empty-block"></div>
+
+    </div>
+</body>
+
+<script type="module">
+
+    import * as THREE from 'three'
+
+
+
+    import {
+        OrbitControls
+    } from 'three/addons/controls/OrbitControls.js';
+
+    import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+    import { KTX2Loader } from 'three/addons/loaders/KTX2Loader.js';
+    import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js'
+    import { RGBELoader } from 'three/addons/loaders/RGBELoader.js'
+
+    import { MeshoptDecoder } from 'three/addons/libs/meshopt_decoder.module.js';
+    import Stats from 'three/addons/libs/stats.module.js';
+
+    import * as normalizeWheel from 'normalizeWheel';
+
+    // TEXT BLOCK BEHAVIOR
+
+    const textBlocks = document.querySelectorAll('.text-block')
+    console.log(textBlocks)
+
+    function changeTextBlock() {
+        textBlocks.forEach((block, index) => {
+            if(!block.classList.contains('text-block-default')) {
+                block.classList.add('text-block_default')
+            }
+
+            if(index + 1 == level) {
+                block.classList.remove('text-block_default')
+            }
+        })
+    }
+
+    // BASIC
+
+    const model = document.querySelector(".model")
+    const modelContainer = document.querySelector('.model-container')
+
+    const fov = 45
+    let aspect = model.clientWidth / model.clientHeight
+    let aspectM = aspect * model.clientHeight / 768
+
+    function updateAspectRatio() {
+        aspect = model.clientWidth / model.clientHeight
+
+        if (!isPlayed) {
+            aspectM = aspect
+        }
+    }
+
+    const near = 0.1
+    const far = 100
+
+    const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+
+    camera.position.z = 0
+    camera.position.y = 1
+    camera.position.x = 0
+    // camera.rotation.y = - Math.PI / 2
+    // camera.rotation.x = 0
+
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
+
+    // renderer.format = THREE.RGBAFormat
+    // renderer.gammaOutput = true
+    // renderer.gammaFactor = 2.2;
+    // renderer.outputEncoding = THREE.sRGBEncoding;
+
+    // renderer.shadowMap.enabled = true;
+    // renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+    // let stats = new Stats()
+    renderer.setSize(model.clientWidth, model.clientHeight)
+    // renderer.setClearColor(0x000, 1.0);
+
+    model.appendChild(renderer.domElement);
+    // model.appendChild(stats.dom);
+
+
+    window.addEventListener('resize', onWindowResize, false)
+
+    function onWindowResize() {
+        renderer.setSize(model.clientWidth, model.clientHeight)
+
+        updateAspectRatio()
+
+        camera.aspect = aspect
+        camera.updateProjectionMatrix()
+        renderer.render(scene, camera);
+    }
+
+    let mixers = []
+    let clocks = []
+
+
+    let isMoving = 0
+    let level = 1
+
+    const LEVELMAX = 5
+    const LEVELMIN = 1
+
+    const scene = new THREE.Scene();
+
+    scene.background = new THREE.Color(0x0c0c0e)
+
+    THREE.ColorManagement.enabled = true;
+
+    const manager = new THREE.LoadingManager();
+
+    new RGBELoader()
+        .setPath('textures/')
+        .load('royal_esplanade_1k.hdr', function (texture) {
+
+            texture.mapping = THREE.EquirectangularReflectionMapping;
+
+            // scene.background = texture;
+            scene.environment = texture;
+
+        });
+
+
+
+    const exposure = 1.4
+
+    // renderer.toneMapping = THREE.ReinhardToneMapping;
+    // renderer.toneMapping = THREE.LinearToneMapping
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = exposure
+    // renderer.useLegacyLights = false;
+
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.VSMShadowMap;
+
+
+    // renderer.outputColorSpace = THREE.sRGBEncoding
+    // THREE.ColorManagement.enabled = true;
+    // renderer.outputColorSpace = THREE.LinearSRGBColorSpace;
+
+    renderer.outputColorSpace = THREE.SRGBColorSpace;
+
+    // THREE.ColorManagement.enabled = true;
+
+
+    // const envmap = new RGBELoader().load("./assets/abandoned_games_room_01_1k.hdr");
+    // envmap.mapping = THREE.EquirectangularReflectionMapping
+    // scene.environment = envmap;
+
+
+    const color = 0xffffff;
+    const intensity = 1.2;
+    const width = 12;
+    const height = 4;
+    const RAlight = new THREE.RectAreaLight(color, intensity, width, height);
+    RAlight.position.set(0, 4, 0);
+    RAlight.rotation.x = THREE.MathUtils.degToRad(35);
+    scene.add(RAlight);
+
+    const pointLight = new THREE.PointLight(0xf0f8ff, 1.3);
+    pointLight.position.set(0, 4, 0);
+    scene.add(pointLight);
+
+    const DirectionalLight = new THREE.DirectionalLight(0xffffff, 0.7);
+    pointLight.position.set(3, 5, 3);
+    scene.add(DirectionalLight);
+
+    const ambientLight = new THREE.AmbientLight(0xf0ffff, 0.1)
+    ambientLight.position.set(0, 7, 0)
+    scene.add(ambientLight)
+
+    // RAYCASTER
+
+    let raycaster = new THREE.Raycaster()
+
+    let pointer = new THREE.Vector2()
+
+    // let controls = new OrbitControls(camera, renderer.domElement)
+    // controls.target.set(5, 5, 20)
+    // controls.update()
+
+    //  CUSTOM CURSOR
+
+    const mouse = Ola({
+        x: undefined,
+        y: undefined
+    }, 5)
+
+    const position = Ola({ x: 0, y: 0 }, 5) // new CDN
+
+    const cursor = document.querySelector('.cursor')
+    const cursorBigPart = document.querySelector('.cursor-bigPart')
+
+    let INTERSECTED = null
+
+
+    window.addEventListener('mousemove', function (e) {
+        event.preventDefault();
+
+        position.set({ x: event.clientX, y: event.clientY })
+
+        cursor.style.transform = `translate3D(${position.x}px,${position.y}px,0)`
+
+        pointer.x = (position.x / window.innerWidth) * 2 - 1
+        pointer.y = - (position.y / window.innerHeight) * 2 + 1
+
+        mouse.set({
+            x: pointer.x,
+            y: pointer.y
+        })
+
+
+
+
+        // if (ninjaes.length > 4) {
+        camera.rotation.y = - mouse.x * 0.01;
+        camera.rotation.x = mouse.y * 0.01
+
+        if (INTERSECTED) {
+            enterMouseHandler()
+        } else if (!INTERSECTED) {
+            leaveMouseHandler()
+        }
+
+        raycaster.setFromCamera(pointer, camera);
+
+
+    })
+
+    // let intersects = undefined
+
+    function intersectHandler(event) {
+
+        // console.log(raycaster)
+
+
+    }
+
+    // TEXT BLOCK and cursor animation  
+
+    // TEXT BLOCK
+
+    let isPlayed = 0
+    let isPlaying = 0
+
+    let moveX = undefined
+    let moveZ = undefined
+    let moveY = undefined
+
+    let tweenBouncing = undefined
+
+    function createBouncing({ ninja, flag }) {
+
+        if (flag) {
+            return ninjaBouncing(ninja)
+        }
+    }
+
+    function ninjaBouncing(ninja) {
+
+        let bounce = Math.PI / 360 * 7.5
+
+        let ninjaRotation = {
+            y: ninja.rotation.y - bounce
+        }
+
+        // console.log(ninja)
+
+
+        let tweenBouncing = new TWEEN.Tween(ninjaRotation, false)
+            .to({ y: ninja.rotation.y + 2 * bounce }, 6000)
+            .easing(TWEEN.Easing.Linear.inOut)
+            .repeat(Infinity) // repeats forever
+            .yoyo(true)
+            .onUpdate(() => {
+                // console.log(ninja.rotation.y)
+                ninja.rotation.y = ninjaRotation.y
+            })
+            .start()
+
+        return tweenBouncing
+    }
+
+    function cameraMoving(direction) {
+
+        let sign = undefined
+
+        if (direction == 'right') {
+            sign = 1
+        }
+
+        if (direction == 'left') {
+            sign = -1
+        }
+
+        updateAspectRatio()
+
+        switch (level) {
+            case 1:
+                moveX = 1 * 0.45 * aspectM
+                moveZ = 2.25
+                moveY = -0.4
+                break;
+            case 2:
+                moveX = 1 * 0.45 * aspectM
+                moveZ = 2.25
+                moveY = -0.4
+                break;
+            case 3:
+                moveX = 1 * 0.65 * aspectM
+                moveZ = 1.5
+                moveY = -0.3
+                break;
+            case 4:
+                moveX = 2.7 * 0.20 * aspectM
+                moveZ = 1 * 0.20 * aspectM
+                moveY = 0.1
+                break;
+            case 5:
+                moveX = 1 * 0.45 * aspectM
+                moveZ = 2
+                moveY = -0.4
+                break;
+            default:
+                break;
+        }
+
+        tweenCamPosition = new TWEEN.Tween(cameraPosition, false)
+            .to({ x: camera.position.x + moveX * sign, z: camera.position.z + moveZ * sign, y: camera.position.y + moveY * sign }, 1000)
+            .easing(TWEEN.Easing.Exponential.InOut)
+            .onUpdate(() => {
+                camera.position.x = cameraPositionRound.x
+                camera.position.z = cameraPositionRound.z
+                camera.position.y = cameraPositionRound.y
+
+                cameraPositionRound.set({ x: cameraPosition.x, y: cameraPosition.y, z: cameraPosition.z })                // console.log(camera.position)
+
+            })
+            .start() // Start the tween immediately.
+            .onStart(() => isPlaying = 1)
+            .onComplete(() => {
+                // groupRotation.y = groupNinja.rotation.y
+                // levelDetection(direction, sign)
+
+                console.log(level)
+                isPlaying = 0
+            })
+    }
+
+    const textBlock = document.querySelector('.text-block')
+
+    let tweenText = TweenMax.to('.text-block', {
+        delay: (i) => 0.25,
+        duration: 1.5,
+        x: -50,
+        opacity: 0,
+        paused: true,
+        easy: Power4.easyInOut,
+        immediateRender: false
+    }).progress(1)
+
+    function clickHandler() {
+
+        if (!isMoving) {
+            if (!isPlayed) {
+                cursorBigPart.style.transform += 'rotate(90deg)'
+            }
+
+            tweenText.play()
+
+            if (!isPlayed && !isPlaying) {
+
+                tweenText.reverse()
+                cameraMoving('left')
+
+                isPlayed = 1
+            } else if (!isPlaying) {
+
+                cameraMoving('right')
+                tweenText.play()
+
+                isPlayed = 0
+            }
+        }
+    }
+
+    model.addEventListener('click', clickHandler)
+
+    // CURSOR
+
+    function enterMouseHandler() {
+        cursorBigPart.style.transform = `scale(1)`
+        if (isPlayed) {
+            cursorBigPart.style.transform += `rotate(135deg)`
+        }
+    }
+
+    function leaveMouseHandler() {
+        cursorBigPart.style.transform = `scale(0)`
+    }
+
+    // DOM ELEMENT add two listnerers for enter and for leave 
+
+    // WHEEL EVENT
+
+    let tweenRotation = undefined
+    let tweenPosition = undefined
+
+    let tweenCamPosition = undefined
+
+
+
+    function levelDetection(direction, sign) {
+
+        if (level == LEVELMAX && direction == 'left') {
+            level = LEVELMIN
+        } else if (level == LEVELMIN && direction == "right") {
+            level = LEVELMAX
+        } else {
+            level = level + (sign * 1)
+        }
+
+        console.log(level)
+
+    }
+
+    function groupRotate(direction) {
+
+        let sign = undefined
+
+        // console.log('check')
+
+        if (direction === 'left') {
+            sign = 1
+        }
+
+        if (direction === 'right') {
+            sign = -1
+        }
+
+        // groupRotation.y = groupNinja.rotation.y
+
+        tweenRotation = new TWEEN.Tween(groupRotation, false)
+            .to({ y: groupRotation.y + (omega * sign) }, 3000)
+            .easing(TWEEN.Easing.Exponential.InOut)
+            .onUpdate(() => {
+                groupNinja.rotation.y = groupRotationRound.y
+
+                groupRotationRound.set({ y: groupRotation.y })
+                // console.log(isMoving)
+            })
+            .start() // Start the tween immediately.
+            .onStart(() => isMoving = 1)
+            .onComplete(() => {
+                // groupRotation.y = groupNinja.rotation.y
+                levelDetection(direction, sign)
+
+                createBoundingBox()
+                changeTextBlock()
+
+                // console.log(level)
+                isMoving = 0
+            })
+    }
+
+    // 
+    let touchStartX, touchStartY, touchEndX, touchEndY
+
+    window.addEventListener('wheel', wheelHandler)
+    window.addEventListener('touchstart', touchStartHandler)
+    window.addEventListener('touchend', touchEndHandler)
+
+    function touchStartHandler(e) {
+        touchStartX = event.touches[0].clientX
+        touchStartY = event.touches[0].clientY
+
+        // console.log(event)
+        // console.log(event.touches[0].clientX, event.touches[0].clientY)
+    }
+
+    function touchEndHandler(e) {
+        touchEndX = event.changedTouches[0].clientX
+        touchEndY = event.changedTouches[0].clientY
+        handlerSwipe()
+    }
+
+    let deltaY = undefined
+
+    function handlerSwipe() {
+        let deltaY = touchStartY - touchEndY
+
+        if (deltaY > 30 && deltaY < 50 && !isMoving) {
+            groupRotate('right')
+            if (isPlayed) {
+                clickHandler()
+            }
+        } else if (deltaY < -30 && deltaY < -50 && !isMoving) {
+            groupRotate('left')
+            if (isPlayed) {
+                clickHandler()
+            }
+        }
+    }
+
+
+    function wheelHandler(e) {
+        console.log('hey')
+
+        // const normalized = normalizeWheel(event)
+        // console.log(normalized)
+
+        if (e.deltaY > 30 && e.deltaY < 50 && !isMoving) {
+            groupRotate('right')
+            if (isPlayed) {
+                clickHandler()
+            }
+        } else if (e.deltaY < -30 && e.deltaY < -50 && !isMoving) {
+            groupRotate('left')
+            if (isPlayed) {
+                clickHandler()
+            }
+        }
+    }
+
+
+    // LOAD MODEL
+
+    let url = "./new/Samurai_FixedMet_11.glb"
+    let m = 3
+
+    const cursorContainer = document.querySelector('.cursor-container')
+
+    const progressBarAlt = document.querySelector('.progress-bar-alt')
+
+    const progressBar = document.getElementById('progress-bar')
+    const progressBarContainer = document.querySelector('.progressbar-container')
+    // console.log()
+
+    manager.onProgress = function (url, loaded, total) {
+        let progress = undefined
+
+        progress = Math.floor(loaded / total * 100)
+        console.log(progress)
+
+        // progressBar.value = progress
+        progressBarAlt.style = `--p:${progress}`
+
+        console.log('url', url)
+        console.log('loaded', loaded)
+        console.log("total", total)
+    }
+
+    manager.onLoad = function (url, loaded, total) {
+        console.log('loading all models have complete')
+        progressBarContainer.classList.add('progressbar-loaded')
+        cursorContainer.classList.remove('cursor-container-loading')
+
+        createBoundingBox()
+    }
+
+    // dracoLoader;
+    const dracoLoader = new DRACOLoader()
+        .setDecoderPath('./js/libs/draco/')
+
+    // ktx2Loader
+    const ktx2Loader = new KTX2Loader()
+        .setTranscoderPath('./js/libs/basis/')
+        .detectSupport(renderer);
+
+    const gltfLoader = new GLTFLoader(manager).setPath('./models/')
+
+    gltfLoader.setKTX2Loader(ktx2Loader);
+    gltfLoader.setMeshoptDecoder(MeshoptDecoder);
+    gltfLoader.setDRACOLoader(dracoLoader);
+
+
+
+    const groupNinja = new THREE.Group()
+
+    groupNinja.rotation.y = Math.PI / 2
+
+    const groupRotation = {
+        y: groupNinja.rotation.y
+    }
+
+    const groupRotationRound = Ola({
+        y: groupNinja.rotation.y
+    }, 500)
+
+    async function loadModel({ x, y, z, ry, scale, url, animation, layers }) {
+
+        const gltf = await gltfLoader.loadAsync(url)
+        const model = gltf.scene
+
+        // scale and position
+
+        model.scale.set(1 * scale, 1 * scale, 1 * scale)
+        model.position.set(x, y, z)
+        model.rotation.set(0, ry, 0)
+        model.name = url
+
+        if (url == './new/KATANA_v24.glb') {
+
+            model.rotation.set(0, ry, Math.PI / 3)
+        }
+
+        if (url == './shogun_5.glb') {
+            console.log('greate')
+        }
+
+        //detect size of model
+
+
+        if (gltf.animations.length && animation) {
+            loadAnimation(gltf)
+        }
+
+        console.log(url)
+
+        model.traverse(function (child) {
+            if (child.isMesh) {
+                // console.log('mesh')
+                // child.visible = true
+                child.castShadow = true
+                child.recieveShadow = true
+                child.frustumCulled = false;
+                // child.material.color.convertSRGBToLinear();
+
+                // console.log(child.name)
+
+
+
+                if (layers.includes(child.name)) {
+                    // child.layers.enable(2)
+                    // console.log('win')
+                }
+
+                if (child.name == 'model_4001') {
+                    // console.log('win')
+                }
+
+                if (url == './smtv_44_p.glb') {
+                    // child.geometry.center()
+                }
+
+            }
+            if ((child.isMesh && child.material.metalness == 1)) {
+                // console.log(child.material.type)
+                // console.log(child.material)
+            }
+            if (child.isSkinnedMesh) {
+                for (let i = 0; i < child.geometry.attributes.position.count; i++) {
+                    // target.fromBufferAttribute(child.geometry.attributes.position, i)
+                    // child.applyBoneTransform(i, target)
+                    // box.expandByPoint(target)
+                }
+
+            }
+        })
+
+        return model
+    }
+
+    let aabb = new THREE.Box3()
+    let targetA = new THREE.Vector3()
+    let boxHelper = undefined
+
+    function createBoundingBox(ninja) {
+        aabb.makeEmpty()
+        // scene.remove(boxHelper)
+
+        let model = undefined
+
+        if (!ninja) {
+            ninjaes.forEach(ninja => {
+                if (ninja.id == level) {
+                    model = ninja.model
+                    console.log('great', ninja.id, level)
+                }
+            })
+        } else {
+            model = ninja
+        }
+
+
+        // console.log(model)
+
+        aabb = new THREE.Box3().setFromObject(model)
+
+        // model.traverse(function (child) {
+        // if (child.isMesh) {
+        // for (let i = 0; i < child.geometry.attributes.position.count; i++) {
+        // targetA.fromBufferAttribute(child.geometry.attributes.position, i)
+        // child.applyBoneTransform(i, targetA)
+        // box.expandByPoint(targetA)
+        // }
+        // }
+        // })
+
+        // boxHelper = new THREE.Box3Helper(aabb, 0xff0000)
+        // scene.add(boxHelper)
+    }
+
+    function loadAnimation(gltf) {
+
+        const animations = gltf.animations
+
+        let mixer = new THREE.AnimationMixer(gltf.scene)
+        let clock = new THREE.Clock()
+
+
+        const firstAction = mixer.clipAction(animations[0])
+
+        mixers.push(mixer)
+        clocks.push(clock)
+
+        firstAction.play();
+    }
+
+    const n = 5
+    const rds = 5
+    const omega = 2 * Math.PI / n
+
+    function createCirclePoints() {
+        let points = []
+
+        const x = function (i) {
+            return rds * Math.cos(omega * i)
+        }
+
+        const y = function (i) {
+            return rds * Math.sin(omega * i)
+        }
+
+        for (let i = 0; i < n; i++) {
+            points.push({
+                x: x(i),
+                y: y(i),
+                ry: Math.PI / 2 - omega * i + Math.PI
+            })
+            // console.log(points[i])
+            // console.log(camera.position, camera.rotation)
+        }
+
+        return points
+    }
+
+    const points = createCirclePoints()
+    pointLight.position.set(points[1].x - 1.5, 5, points[1].y - 2.5)
+
+    let p = 1.30 // scale models
+    let delta = -0.3 // down model
+
+    const ninjaesObject = {
+        donatello: loadModel({
+            x: points[0].x,
+            y: 0 + delta,
+            z: points[0].y,
+            ry: points[0].ry,
+            scale: 0.085 * p,
+            url: './shogun_5.glb',
+            animation: false,
+            layers: []
+        }),
+        michelangelo: loadModel({
+            x: points[1].x,
+            y: 0 + delta,
+            z: points[1].y,
+            ry: points[1].ry,
+            scale: 1 * p,
+            url: './new/CSAMUR_v6.glb',
+            animation: true,
+            layers: []
+        }),
+        rafhael: loadModel({
+            x: points[2].x,
+            y: -0.5,
+            z: points[2].y,
+            ry: points[2].ry,
+            scale: 1.6 * p,
+            url: './new/Ronin_9.glb',
+            animation: true,
+            layers: []
+        }),
+        katana: loadModel({
+            x: points[3].x,
+            y: 0.7,
+            z: points[3].y,
+            ry: points[3].ry + Math.PI,
+            scale: 0.4,
+            url: './new/KATANA_v24.glb',
+            animation: true,
+            layers: []
+        }),
+        shrader: loadModel({
+            x: points[4].x,
+            y: 0 + delta,
+            z: points[4].y,
+            ry: points[4].ry,
+            scale: 0.9 * p,
+            url: './new/Samurai_FixedMet_11.glb',
+            animation: true,
+            layers: []
+        }),
+    }
+
+    const promises = Object.values(ninjaesObject)
+
+
+
+    // const groupPosition = {
+    //     x: groupNinja.position.x
+    // }
+
+    // const groupPositionRound = Ola({
+    //     x: groupNinja.rotation.x
+    // }, 500)
+
+
+
+    const cameraPosition = {
+        x: camera.position.x,
+        y: camera.position.y,
+        z: camera.position.z
+    }
+
+    const cameraPositionRound = Ola({
+        x: camera.position.x,
+        y: camera.position.y,
+        z: camera.position.z
+    }, 250)
+
+    const ninjaes = []
+
+    let tweensNinjaes = []
+
+    promises.forEach((promise, index) => {
+        promise.then(ninja => {
+
+            ninjaes.push({ "model": ninja, "id": index + 1 })
+            groupNinja.add(ninja)
+            // scene.add(ninja)
+            // console.log(ninja)
+
+            tweensNinjaes.push(ninjaBouncing(ninja))
+            // createBoundingBox()
+
+            if (ninja.name == './shogun_5.glb') {
+                // tweensNinjaes.push(ninjaBouncing(ninja))
+            }
+        })
+    })
+
+
+    scene.add(groupNinja)
+    // RENDER LOOP
+
+    let counter = 0
+
+    // console.log(raycaster)
+    // console.log(aabb)
+
+    function animate() {
+        requestAnimationFrame(animate);
+        renderer.render(scene, camera);
+        counter++
+
+        if (counter == 1) {
+            const intersects = raycaster.ray.intersectsBox(aabb)
+            // console.log(intersects)
+
+            if (intersects) {
+                INTERSECTED = true
+            } else if (!intersects) {
+                INTERSECTED = null
+            }
+
+            counter = 0
+        }
+
+        // animation maxima
+
+        if (mixers) {
+            for (let i = 0; i < mixers.length; i++) (
+                mixers[i].update(clocks[i].getDelta())
+            )
+        }
+
+        //  tween animation
+
+        if (tweenRotation) {
+            tweenRotation.update()
+        }
+
+        if (tweenCamPosition) {
+            tweenCamPosition.update()
+        }
+
+        if (tweensNinjaes.length) {
+            for (let tween of tweensNinjaes) {
+                tween.update()
+            }
+        }
+
+        // binding model to mouse
+        if (ninjaes.length > 4) {
+            for (const ninja of ninjaes) {
+
+                ninja.model.updateMatrixWorld()
+
+                if (ninja.id == level) {
+                    ninja.model.rotation.y = ninja.model.rotation.y + pointer.x * 0.15
+                }
+            }
+        }
+
+        // gsap.to(camera.rotation, {
+        // y: camera.rotation.y + mouse.x * 0.001,
+        // y: ninja.model.rotation.y + mouseDiff.x * 10,
+        // x: mouse.y * 0.15,
+        // duration: 0.3,
+        // easy: "Power1.easyIn",
+        // })
+
+        // controls.update()
+    };
+
+    animate();
+
+
+</script>
+
+</html>
