@@ -287,7 +287,7 @@ progress {
     display: none
 }
 
-@media (max-width:1421px) {
+@media (max-width:1521px) {
     .text-block p,
     .image-box {
         margin-bottom: 30px
