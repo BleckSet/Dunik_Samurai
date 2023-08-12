@@ -460,6 +460,24 @@ progress {
     text-align: center
 }
 
+
+
+@media (max-width:1701px) {
+    .model_container_inner.open {
+        left: 260px
+    }
+}
+
+@media (max-width:1521px) {
+    .text-block p,
+    .image-box {
+        margin-bottom: 30px
+    }
+    .text-block h1 {
+        line-height: 116px
+    }
+}
+
 @media (max-width:1021px) {
     .model_container_inner.container {
         top: auto;
@@ -475,21 +493,5 @@ progress {
     }
     .model_container_inner.open {
         left: 0
-    }
-}
-
-@media (max-width:1701px) {
-    .model_container_inner.open {
-        left: 260px
-    }
-}
-
-@media (max-width:1521px) {
-    .text-block p,
-    .image-box {
-        margin-bottom: 30px
-    }
-    .text-block h1 {
-        line-height: 116px
     }
 }
