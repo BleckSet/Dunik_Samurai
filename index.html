@@ -447,7 +447,7 @@
 
     const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
 
-    camera.position.z = 0
+    camera.position.z = -0.5
     camera.position.y = 1
     camera.position.x = 0
     // camera.rotation.y = - Math.PI / 2
@@ -690,28 +690,28 @@
         switch (level) {
             case 1:
                 moveX = 1 * 0.65 * aspectM
-                moveZ = 2.25
-                moveY = -0.4
+                moveZ = 1.5
+                moveY = -0.2
                 break;
             case 2:
                 moveX = 1 * 0.65 * aspectM
-                moveZ = 2.25
-                moveY = -0.4
+                moveZ = 1.5
+                moveY = -0.2
                 break;
             case 3:
                 moveX = 1 * 0.85 * aspectM
-                moveZ = 1.5
-                moveY = -0.3
+                moveZ = 1
+                moveY = -0.25
                 break;
             case 4:
                 moveX = 3 * 0.30 * aspectM
-                moveZ = 1 * 0.20 * aspectM
-                moveY = 0.1
+                moveZ = 1 * 0.10 * aspectM
+                moveY = 0
                 break;
             case 5:
                 moveX = 1 * 0.55 * aspectM
-                moveZ = 2
-                moveY = -0.4
+                moveZ = 1
+                moveY = -0.2
                 break;
             default:
                 break;
